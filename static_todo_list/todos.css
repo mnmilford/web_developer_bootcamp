@@ -1,0 +1,28 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+  padding: 10px 30px;
+  box-shadow: 2px 2px 4px rgba(5, 5, 5, .2), -2px 2px 4px rgba(5, 5, 5, .2);
+}
+
+.completedTask {
+  text-decoration: line-through;
+}
