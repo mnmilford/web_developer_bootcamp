@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 21.44px;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #efefef;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cell {
+  margin-bottom: 25px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+@media screen and (min-width: 700px) {
+  .cell {
+    width: 31.5%;
+  }
+  h1 {
+    width: 31.5%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .cell {
+    width: calc(100%/4 - 1.5%);
+  }
+  h1 {
+    width: calc(100%/4 - 1.5%);
+  }
+}
