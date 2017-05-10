@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ravi Prakash';
+  margin: 8px;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+div {
+  width: 33.333%;
+  min-height: 200px;
+  border: 1px solid black;
+  float: left;
+}
+
+.no-top {
+  border-top: none;
+}
+
+.no-right {
+  border-right: none;
+}
+
+.no-bottom {
+  border-bottom: none;
+}
+
+.no-left {
+  border-left: none;
+}
