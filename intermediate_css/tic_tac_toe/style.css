@@ -15,6 +15,7 @@ h1 {
 main {
   width: 600px;
   margin: 0 auto;
+  overflow: auto;
 }
 
 div {
@@ -38,4 +39,26 @@ div {
 
 .no-left {
   border-left: none;
+}
+
+/*Table Layout Styles*/
+
+table {
+  margin: auto;
+}
+
+td {
+  width: 200px;
+  height: 200px;
+  padding: 0px;
+}
+
+.vertical {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.horizontal {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
