@@ -1,0 +1,8 @@
+whole thing is fixed width
+20px border, #bdc3c7
+date color: #3498db
+date all-caps, letter-spacing
+h2 color: #2c3e50
+font: source sans pro
+left-border on blockquote
+bacon ips

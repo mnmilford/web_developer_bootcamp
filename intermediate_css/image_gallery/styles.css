@@ -1,0 +1,55 @@
+/****************************************
+MOBILE & BASE STYLING
+****************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 25px;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #efefef;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cell {
+  margin-bottom: 25px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/****************************************
+MEDIA QUERIES
+****************************************/
+
+@media screen and (min-width: 700px) {
+  .cell {
+    width: calc(100%/3 - 16.667px);
+  }
+  h1 {
+    width: calc(100%/3 - 16.667px);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .cell {
+    /*width: calc(100%/4 - 16.667px);*/
+    width: calc(100%/4 - 18.75px);
+  }
+  h1 {
+    width: calc(100%/4 - 18.75px);
+  }
+}
