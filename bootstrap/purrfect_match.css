@@ -1,0 +1,25 @@
+body {
+    background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467?dpr=2&fit=crop&fm=jpg&h=775&q=50&w=1450);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 1.5em;
+  color: #00b78f;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #00a581;
+}
+
+nav li {
+  font-weight: bold;
+}
