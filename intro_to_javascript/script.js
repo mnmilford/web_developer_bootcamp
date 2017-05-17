@@ -10,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     title.innerHTML = "OMG it FUCKING CHANGED!";
     var body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = "lightblue";
+    body.innerHTML += "<p>Check the JavaScript console...</p>";
   }, 3000);
 });
