@@ -9,13 +9,13 @@ var numberOfGuesses = 0;
 while (guess !== secretNumber) {
   guess = Number(prompt("Guess a number between 1-10!"));
   numberOfGuesses += 1;
-  if (isNaN(guess)) {
+  if (guess === secretNumber) {
+    alert("Congrats! You got it in " + numberOfGuesses + " tries.");
+  } else if (isNaN(guess)) {
     alert("Try a number next time..");
   } else if (guess < secretNumber) {
     alert("Too low. Try again!");
   } else if (guess > secretNumber) {
     alert("Too high. Try again!");
-  } else {
-    alert("Congrats! You got it in " + numberOfGuesses + " tries.");
   }
 }
