@@ -26,4 +26,12 @@ while (k < 333) {
   k++
 }
 
-// Print all numbers divisible by 5 AND 3 between 5 and 50
+// Print all numbers divisible by 5 AND 3 from 5 up to & including 50
+
+var x = 5;
+while (x <= 50) {
+  if (x % 15 === 0) {
+    console.log(x);
+  }
+  x++;
+}
