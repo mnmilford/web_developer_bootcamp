@@ -18,4 +18,12 @@ while (j < 40) {
 
 // Print all odd numbers between 300 and 333
 
+var k = 300;
+while (k < 333) {
+  if (k % 2 !== 0) {
+    console.log(k);
+  }
+  k++
+}
+
 // Print all numbers divisible by 5 AND 3 between 5 and 50
