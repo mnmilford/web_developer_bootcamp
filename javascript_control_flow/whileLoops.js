@@ -1,7 +1,7 @@
 // Print all numbers between -10 & 19
 
 var i = -10;
-while (i < 19) {
+while (i <= 19) {
   console.log(i);
   i++;
 }
@@ -9,7 +9,7 @@ while (i < 19) {
 // Print all even numbers between 10 & 40
 
 var j = 10;
-while (j < 40) {
+while (j <= 40) {
   if (j % 2 === 0) {
     console.log(j);
   }
@@ -19,7 +19,7 @@ while (j < 40) {
 // Print all odd numbers between 300 and 333
 
 var k = 300;
-while (k < 333) {
+while (k <= 333) {
   if (k % 2 !== 0) {
     console.log(k);
   }
