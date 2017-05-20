@@ -2,12 +2,12 @@
 // returns true if the number is even, and false otherwise
 
 function isEven(num) {
-  return num % 2 === 0 ? true : false;
+  return num % 2 === 0;
 }
 
-// console.log(isEven(4));
-// console.log(isEven(21));
-// console.log(isEven(68));
+console.log(isEven(4));
+console.log(isEven(21));
+console.log(isEven(68));
 
 
 // Write a factorial() function which takes a single number
@@ -21,6 +21,19 @@ function factorial(num) {
   return num
 }
 
-// console.log(factorial(5));
-// console.log(factorial(0));
-// console.log(factorial(10));
+console.log(factorial(5));
+console.log(factorial(0));
+console.log(factorial(10));
+
+
+// Write a kebabToSnake() function which takes a single kebab-cased
+// string argument and returns the snake_cased version
+
+function kebabToSnake(str) {
+  var newstr = str.replace(/-/g, '_');
+  return newstr;
+}
+
+console.log(kebabToSnake("hello-world"));
+console.log(kebabToSnake("cats-are-awesome"));
+console.log(kebabToSnake("nothingHere"));
