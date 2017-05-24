@@ -38,6 +38,20 @@ function sumArray(array) {
   return sum
 }
 
-console.log(sumArray(arr)); //15
-console.log(sumArray([-5, 100])); //95
-console.log(sumArray([10,3,10,4])); //27
+// console.log(sumArray(arr)); //15
+// console.log(sumArray([-5, 100])); //95
+// console.log(sumArray([10,3,10,4])); //27
+
+// Write a function max() that accepts an array of numbers and returns the maximum number in the array
+
+function max(array) {
+  var max = array[0];
+  for (var i of array) {
+    (i > max) ? max = i : max;
+  }
+  return max;
+}
+
+console.log(max(arr));  //5
+console.log(max([10,3,10,4]));  //10
+console.log(max([-5,-20,100]));  //100
