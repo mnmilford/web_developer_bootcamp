@@ -22,8 +22,22 @@ function isUniform(array) {
   return true;
 }
 
-console.log(isUniform(arr));  //false
-console.log(isUniform([1,1,1,2]));  //false
-console.log(isUniform([3,3,3,3,3,3,3]));  //true
-console.log(isUniform(["a", "b", "p"]));  //false
-console.log(isUniform(["b", "b", "b"]));  //true
+// console.log(isUniform(arr));  //false
+// console.log(isUniform([1,1,1,2]));  //false
+// console.log(isUniform([3,3,3,3,3,3,3]));  //true
+// console.log(isUniform(["a", "b", "p"]));  //false
+// console.log(isUniform(["b", "b", "b"]));  //true
+
+// Write a function sumArray() that accepts an array of numbers and returns the sum of all numbers in the array
+
+function sumArray(array) {
+  var sum = 0;
+  for (var i of array) {
+    sum += i;
+  }
+  return sum
+}
+
+console.log(sumArray(arr)); //15
+console.log(sumArray([-5, 100])); //95
+console.log(sumArray([10,3,10,4])); //27
