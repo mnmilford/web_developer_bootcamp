@@ -22,8 +22,8 @@ let movies = [
 ]
 
 for (let movie of movies) {
-  let str = "";
-  movie.watched ? str += "You have watched " : str += "You have not seen ";
+  let str = "You have ";
+  movie.watched ? str += "watched " : str += "not seen ";
   str += '"' + movie.title + '" - ';
   str += movie.rating + " stars";
   console.log(str);
