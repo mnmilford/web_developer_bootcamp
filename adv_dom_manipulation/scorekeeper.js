@@ -20,7 +20,7 @@ var gameScore = document.querySelector('#game-score');
 var reset = document.querySelector('#reset');
 
 function addPoint(player) {
-  if (p1Score < playingTo.value && p2Score < playingTo.value) {
+  if (p1Score < playingTo.textContent && p2Score < playingTo.textContent) {
     if (player === p1) {
       p1Score++;
       p1.textContent = p1Score;
@@ -33,9 +33,9 @@ function addPoint(player) {
 }
 
 function makeScoreGreen() {
-  if (p1Score === Number(playingTo.value)) {
+  if (p1Score === Number(playingTo.textContent)) {
     p1.style.color = "green";
-  } else if (p2Score === Number(playingTo.value)) {
+  } else if (p2Score === Number(playingTo.textContent)) {
     p2.style.color = "green";
   }
 }
@@ -59,4 +59,6 @@ reset.addEventListener("click", function(){
   p2Score = 0;
   p2.textContent = p2Score;
   p2.style.color = "initial";
+  gameScore.value = 0;
+  playingTo.textContent = 0;
 });
