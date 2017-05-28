@@ -15,11 +15,12 @@ var p2Score = 0;
 // ******************************************
 // Other game variables
 // ******************************************
-var winningScore = 5;
+var playingTo = document.querySelector('#game-over');
+var gameScore = document.querySelector('#game-score');
 var reset = document.querySelector('#reset');
 
 function addPoint(player) {
-  if (p1Score < winningScore && p2Score < winningScore) {
+  if (p1Score < playingTo.value && p2Score < playingTo.value) {
     if (player === p1) {
       p1Score++;
       p1.textContent = p1Score;
@@ -32,9 +33,9 @@ function addPoint(player) {
 }
 
 function makeScoreGreen() {
-  if (p1Score === winningScore) {
+  if (p1Score === Number(playingTo.value)) {
     p1.style.color = "green";
-  } else if (p2Score === winningScore) {
+  } else if (p2Score === Number(playingTo.value)) {
     p2.style.color = "green";
   }
 }
@@ -45,6 +46,11 @@ p1Button.addEventListener("click", function(){
 
 p2Button.addEventListener("click", function(){
   addPoint(p2);
+});
+
+gameScore.addEventListener("click", function(){
+  playingTo.value = gameScore.value;
+  playingTo.textContent = playingTo.value;
 });
 
 reset.addEventListener("click", function(){
