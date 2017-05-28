@@ -16,6 +16,7 @@ var p2Score = 0;
 // Other game variables
 // ******************************************
 var winningScore = 5;
+var reset = document.querySelector('#reset');
 
 function addPoint(player) {
   if (p1Score < winningScore && p2Score < winningScore) {
@@ -44,4 +45,13 @@ p1Button.addEventListener("click", function(){
 
 p2Button.addEventListener("click", function(){
   addPoint(p2);
+});
+
+reset.addEventListener("click", function(){
+  p1Score = 0;
+  p1.textContent = p1Score;
+  p1.style.color = "initial";
+  p2Score = 0;
+  p2.textContent = p2Score;
+  p2.style.color = "initial";
 });
