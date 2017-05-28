@@ -48,9 +48,8 @@ p2Button.addEventListener("click", function(){
   addPoint(p2);
 });
 
-gameScore.addEventListener("click", function(){
-  playingTo.value = gameScore.value;
-  playingTo.textContent = playingTo.value;
+gameScore.addEventListener("change", function(){
+  playingTo.textContent = gameScore.value;
 });
 
 reset.addEventListener("click", function(){
