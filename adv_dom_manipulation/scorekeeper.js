@@ -49,7 +49,7 @@ p2Button.addEventListener("click", function(){
 });
 
 gameScore.addEventListener("change", function(){
-  playingTo.textContent = gameScore.value;
+  playingTo.textContent = this.value;
 });
 
 reset.addEventListener("click", function(){
