@@ -24,17 +24,37 @@ function randomItem(arr) {
   return arr[Math.floor(Math.random()*arr.length)];
 }
 
-for (var i = 0; i < colors.length; i++) {
-  //add initial colors to squares
-  squares[i].style.backgroundColor = colors[i];
-
-  //add click listeners to squares
-  squares[i].addEventListener("click", function(){
-    let pickedColor = this.style.backgroundColor;
-    if (pickedColor !== colorToGuess) {
-      this.classList.add("hiddenSquare");
-    }
-  });
+function newColors() {
+  colors.splice(0);
+  randomRGBColors();
+  colorToGuess = randomItem(colors);
+  colorToGuessDisplay.textContent = colorToGuess;
 }
 
-colorToGuessDisplay.textContent = colorToGuess;
+function newGame() {
+  newColors();
+  // colorToGuessDisplay.textContent = colorToGuess;
+  for (var i = 0; i < colors.length; i++) {
+    //add initial colors to squares
+    squares[i].style.backgroundColor = colors[i];
+    //add click listeners to squares
+    squares[i].addEventListener("click", function(){
+      let pickedColor = this.style.backgroundColor;
+      if (pickedColor === colorToGuess) {
+        feedback.textContent = "You got it!";
+        header.style.backgroundColor = colorToGuess;
+        for (square of squares) {
+          square.classList.remove("hiddenSquare");
+          square.style.backgroundColor = colorToGuess;
+        }
+      } else {
+          feedback.textContent = "Nope. Try again!";
+          this.classList.add("hiddenSquare");
+      }
+    });
+  }
+}
+
+resetButton.addEventListener("click", newGame);
+
+newGame();
