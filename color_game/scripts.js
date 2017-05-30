@@ -29,15 +29,26 @@ function randomItem(arr) {
 
 function newColors() {
   colors.splice(0);
-  randomRGBColors();
+  randomRGBColors(level);
   colorToGuess = randomItem(colors);
   colorToGuessDisplay.textContent = colorToGuess;
   feedback.textContent = "";
   header.style.backgroundColor = "#4278AB";
+  container.innerHTML = "";
+}
+
+function generateSquares() {
+  let result = "";
+  for (var i = 0; i < colors.length; i++) {
+    result += '<div class="square"></div>';
+  }
+  container.innerHTML += result;
 }
 
 function newGame() {
   newColors();
+  generateSquares();
+  let squares = document.querySelectorAll('.square');
   // colorToGuessDisplay.textContent = colorToGuess;
   for (var i = 0; i < colors.length; i++) {
     //add initial colors to squares
