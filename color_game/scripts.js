@@ -1,5 +1,10 @@
-let colors = [];
 let squares = document.querySelectorAll('.square');
+let colors = [];
+// Have to run the function below to fill up the colors array
+// before I can establish the colorToGuess variable
+randomRGBColors(); 
+let colorToGuess = randomItem(colors);
+
 
 function randomRGBColors() {
   for (var i = 0; i < 6; i++) {
@@ -12,10 +17,11 @@ function randomRGBColors() {
     result += blue + ")";
     colors.push(result);
   }
-
 }
 
-randomRGBColors();
+function randomItem(arr) {
+  return arr[Math.floor(Math.random()*arr.length)];
+}
 
 for (var i = 0; i < colors.length; i++) {
   squares[i].style.backgroundColor = colors[i];
