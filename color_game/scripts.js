@@ -1,4 +1,6 @@
 let squares = document.querySelectorAll('.square');
+let colorToGuessDisplay = document.querySelector('#colorToGuess');
+let header = document.querySelector('header');
 let colors = [];
 // Have to run the function below to fill up the colors array
 // before I can establish the colorToGuess variable
@@ -26,3 +28,5 @@ function randomItem(arr) {
 for (var i = 0; i < colors.length; i++) {
   squares[i].style.backgroundColor = colors[i];
 }
+
+colorToGuessDisplay.textContent = colorToGuess;
