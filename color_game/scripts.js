@@ -26,7 +26,16 @@ function randomItem(arr) {
 }
 
 for (var i = 0; i < colors.length; i++) {
+  //add initial colors to squares
   squares[i].style.backgroundColor = colors[i];
+
+  //add click listeners to squares
+  squares[i].addEventListener("click", function(){
+    let pickedColor = this.style.backgroundColor;
+    if (pickedColor !== colorToGuess) {
+      this.classList.add("hiddenSquare");
+    }
+  });
 }
 
 colorToGuessDisplay.textContent = colorToGuess;
