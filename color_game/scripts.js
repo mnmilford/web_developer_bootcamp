@@ -1,14 +1,17 @@
-let squares = document.querySelectorAll('.square');
 let colorToGuessDisplay = document.querySelector('#colorToGuess');
 let header = document.querySelector('header');
 let feedback = document.querySelector('#feedback');
 let resetButton = document.querySelector('#new_colors_button')
+let easyBtn = document.querySelector('#easy_btn');
+let hardBtn = document.querySelector('#hard_btn');
+let container = document.querySelector('#container');
 let colors = [];
 let colorToGuess;
+let level;
 
 
-function randomRGBColors() {
-  for (var i = 0; i < 6; i++) {
+function randomRGBColors(num=6) {
+  for (var i = 0; i < num; i++) {
     result = "rgb(";
     let red = Math.floor(Math.random() * 256).toString();
     let green = Math.floor(Math.random() * 256).toString();
@@ -58,5 +61,15 @@ function newGame() {
 }
 
 resetButton.addEventListener("click", newGame);
+
+easyBtn.addEventListener("click", function(){
+  level = 3;
+  newGame();
+})
+
+hardBtn.addEventListener("click", function(){
+  level = 6;
+  newGame();
+})
 
 newGame();
