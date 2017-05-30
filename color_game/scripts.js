@@ -1,11 +1,10 @@
 let squares = document.querySelectorAll('.square');
 let colorToGuessDisplay = document.querySelector('#colorToGuess');
 let header = document.querySelector('header');
+let feedback = document.querySelector('#feedback');
+let resetButton = document.querySelector('#new_colors_button')
 let colors = [];
-// Have to run the function below to fill up the colors array
-// before I can establish the colorToGuess variable
-randomRGBColors(); 
-let colorToGuess = randomItem(colors);
+let colorToGuess;
 
 
 function randomRGBColors() {

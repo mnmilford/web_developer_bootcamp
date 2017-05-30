@@ -82,6 +82,10 @@ nav li:nth-child(3) {
   background-color: rgba(0, 0, 0, 0) !important;
 }
 
+#feedback {
+  color: red;
+}
+
 @media (max-width: 1200px) {
   #container {
     width: calc(100% - 24px);
