@@ -29,6 +29,8 @@ function newColors() {
   randomRGBColors();
   colorToGuess = randomItem(colors);
   colorToGuessDisplay.textContent = colorToGuess;
+  feedback.textContent = "";
+  header.style.backgroundColor = "#4278AB";
 }
 
 function newGame() {
