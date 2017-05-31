@@ -1,5 +1,5 @@
 body {
-  background-color: #232323;
+  background-color: white;
   font-family: 'Monda', sans-serif;
 }
 
@@ -8,7 +8,7 @@ header {
   flex-direction: column;
   color: white;
   text-align: center;
-  background-color: #4278AB;
+  background-color: #24292E;
   min-height: 200px;
   min-width: 100%;
   justify-content: center;
@@ -27,6 +27,8 @@ nav {
   background-color: white;
   padding: 16px auto;
   font-size: 2.5rem;
+  color: #24292E;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .2), -3px 3px 6px rgba(0, 0, 0, .2);
 }
 
 nav ul {
@@ -37,7 +39,6 @@ nav ul {
   margin: 0 auto;
   justify-content: space-between;
   align-items: stretch;
-  color: #4278AB;
 }
 
 nav li {
@@ -83,7 +84,7 @@ nav li:nth-child(3) {
 }
 
 .selectedBtn {
-  border-bottom: 4px solid #4278AB;
+  border-bottom: 4px solid #24292E;
 }
 
 #feedback {

@@ -33,7 +33,7 @@ function newColors() {
   colorToGuess = randomItem(colors);
   colorToGuessDisplay.textContent = colorToGuess;
   feedback.textContent = "";
-  header.style.backgroundColor = "#4278AB";
+  header.style.backgroundColor = "#24292E";
   container.innerHTML = "";
 }
 
