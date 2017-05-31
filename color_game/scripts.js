@@ -30,6 +30,7 @@ function newColors() {
   colorToGuess = randomItem(colors);
   colorToGuessDisplay.textContent = colorToGuess;
   feedback.textContent = "";
+  feedback.style.color = "red";
   header.style.backgroundColor = "#24292E";
   container.innerHTML = "";
 }
@@ -54,6 +55,7 @@ function newGame() {
       let pickedColor = this.style.backgroundColor;
       if (pickedColor === colorToGuess) {
         feedback.textContent = "Correct!";
+        feedback.style.color = "green";
         header.style.backgroundColor = colorToGuess;
         for (square of squares) {
           square.classList.remove("hiddenSquare");
