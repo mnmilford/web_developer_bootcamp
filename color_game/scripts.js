@@ -75,11 +75,19 @@ resetButton.addEventListener("click", newGame);
 
 easyBtn.addEventListener("click", function(){
   level = 3;
+  if (hardBtn.classList.contains('selectedBtn')) {
+    hardBtn.classList.remove('selectedBtn');
+    this.classList.add('selectedBtn');
+  }
   newGame();
 })
 
 hardBtn.addEventListener("click", function(){
   level = 6;
+  if (easyBtn.classList.contains('selectedBtn')) {
+    easyBtn.classList.remove('selectedBtn');
+    this.classList.add('selectedBtn');
+  }
   newGame();
 })
 
