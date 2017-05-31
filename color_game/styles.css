@@ -10,7 +10,7 @@ header {
   text-align: center;
   background-color: #4278AB;
   min-height: 200px;
-  width: 100%;
+  min-width: 100%;
   justify-content: center;
 }
 
@@ -49,7 +49,7 @@ nav li {
   list-style: none;
   font-weight: bold;
   padding-bottom: 2px;
-  margin: 10px 12px 10px;
+  margin: 10px 12px;
 }
 
 nav li:nth-child(2) {
@@ -89,6 +89,7 @@ nav li:nth-child(3) {
 #feedback {
   color: red;
   text-align: center;
+  font-size: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -98,13 +99,37 @@ nav li:nth-child(3) {
   nav ul {
     width: 100%;
   }
-  nav li {
-    height: 40px;
+}
+
+@media (max-width: 800px) {
+  nav li:nth-child(2) {
+    width: 1px;
+    flex-basis: 100%;
+    order: 1;
+  }
+  nav ul {
+    justify-content: space-around;
+  }
+  nav li:nth-child(3) {
+    margin-left: 12px;
+  }
+  html {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 600px) {
-  nav li:nth-child(2) {
-    order: 1;
+@media (max-width: 500px) {
+  nav li:nth-child(1) {
+    flex-basis: 100%;
+  }
+  html {
+    font-size: 12px;
+  }
+  .square {
+    padding-bottom: calc(33.3333% - 16px);
+    padding-right: calc(33.3333% - 16px);
+    margin: 8px;
+    background: white;
+    border-radius: 100%;
   }
 }
