@@ -49,7 +49,6 @@ nav li {
   flex: 0 1 auto;
   list-style: none;
   font-weight: bold;
-  padding-bottom: 2px;
   margin: 10px 12px;
 }
 
@@ -58,12 +57,25 @@ nav li:not(:nth-child(2)):hover {
   cursor: pointer;
 }
 
-nav li:nth-child(2) {
+#feedback {
   flex-grow: 1;
-  flex-basis: 180px;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
-nav li:nth-child(3) {
+.correctFeedback {
+  color: green;
+  margin: 12px 0;
+}
+
+.wrongFeedback {
+  color: red;
+  margin: 12px 0;
+}
+
+#easy_btn {
   margin-left: auto;
 }
 
@@ -80,7 +92,7 @@ nav li:nth-child(3) {
   padding-right: calc(33.3333% - 20px);
   margin: 10px;
   background: white;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, .2), -1px 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .square:hover {
@@ -99,32 +111,40 @@ nav li:nth-child(3) {
   box-shadow: unset;
 }
 
-#feedback {
-  color: red;
-  text-align: center;
-  font-size: 2rem;
-}
-
 @media (max-width: 1200px) {
   #container {
     width: calc(100% - 24px);
   }
   nav ul {
-    width: 100%;
+    width: 90%;
   }
 }
 
 @media (max-width: 800px) {
-  nav li:nth-child(2) {
-    width: 1px;
+  #feedback {
     flex-basis: 100%;
     order: 1;
   }
-  nav ul {
-    justify-content: space-around;
+  #play_again {
+    order: -1;
+    margin: 0;
+    color: white;
+    border-radius: 25px;
   }
-  nav li:nth-child(3) {
-    margin-left: 12px;
+  #play_again span {
+    padding: 5px 20px;
+    background-color: #24292E;
+    border-radius: 25px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  }
+  #play_again span:active {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+  }
+  #play_again:hover {
+    border: none;
+  }
+  nav ul {
+    justify-content: center;
   }
   html {
     font-size: 14px;
@@ -132,11 +152,12 @@ nav li:nth-child(3) {
 }
 
 @media (max-width: 500px) {
-  nav li:nth-child(1) {
+  #play_again {
     flex-basis: 100%;
+    margin-top: 10px;
   }
-  nav li:nth-child(1):hover {
-    border: none;
+  #easy_btn {
+    margin-left: 12px;
   }
   html {
     font-size: 12px;

@@ -1,7 +1,7 @@
 let colorToGuessDisplay = document.querySelector('#colorToGuess');
 let header = document.querySelector('header');
 let feedback = document.querySelector('#feedback');
-let resetButton = document.querySelector('#new_colors_button')
+let resetButton = document.querySelector('#play_again')
 let easyBtn = document.querySelector('#easy_btn');
 let hardBtn = document.querySelector('#hard_btn');
 let container = document.querySelector('#container');
@@ -30,7 +30,6 @@ function newColors() {
   colorToGuess = randomItem(colors);
   colorToGuessDisplay.textContent = colorToGuess;
   feedback.textContent = "";
-  feedback.style.color = "red";
   header.style.backgroundColor = "#24292E";
   container.innerHTML = "";
 }
@@ -54,8 +53,8 @@ function newGame() {
     squares[i].addEventListener("click", function(){
       let pickedColor = this.style.backgroundColor;
       if (pickedColor === colorToGuess) {
+        feedback.classList.add('correctFeedback');
         feedback.textContent = "Correct!";
-        feedback.style.color = "green";
         header.style.backgroundColor = colorToGuess;
         for (square of squares) {
           square.classList.remove("hiddenSquare");
@@ -63,6 +62,7 @@ function newGame() {
         }
       } else {
           feedback.textContent = "Try again";
+          feedback.classList.add('wrongFeedback');
           this.classList.add("hiddenSquare");
       }
     });
