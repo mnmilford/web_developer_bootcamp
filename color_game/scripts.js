@@ -53,6 +53,7 @@ function newGame() {
     squares[i].addEventListener("click", function(){
       let pickedColor = this.style.backgroundColor;
       if (pickedColor === colorToGuess) {
+        feedback.classList.remove('wrongFeedback');
         feedback.classList.add('correctFeedback');
         feedback.textContent = "Correct!";
         header.style.backgroundColor = colorToGuess;
@@ -61,8 +62,9 @@ function newGame() {
           square.style.backgroundColor = colorToGuess;
         }
       } else {
-          feedback.textContent = "Try again";
+          feedback.classList.remove('correctFeedback');
           feedback.classList.add('wrongFeedback');
+          feedback.textContent = "Try again";
           this.classList.add("hiddenSquare");
       }
     });
