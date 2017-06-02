@@ -1,7 +1,6 @@
 // Selecting elements
 let h1s = $("h1");
 let lis = $("li");
-let animals = $(".animal");
 let specialAnimal = $("#adorable");
 
 // Using the .css() method
@@ -14,3 +13,8 @@ let styles = {
 }
 // Applying predefined styles to elements
 lis.css(styles);
+
+// Select multiple items and change css without declaring a variable
+$(".animal").css("font-size", "2rem");
+
+$("a").css({"font-size": "2rem", "text-decoration": "none"});
