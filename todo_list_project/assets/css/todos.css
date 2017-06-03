@@ -46,6 +46,7 @@ input {
   color: #2980b9;
   font-size: 1rem;
   font-weight: bold;
+  display: none;
 }
 
 input:focus {
