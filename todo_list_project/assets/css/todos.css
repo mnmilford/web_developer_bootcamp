@@ -63,8 +63,6 @@ input::placeholder {
   float: right;
 }
 
-
-
 #container {
   width: 90%;
   margin: 6% auto 0;
@@ -76,3 +74,16 @@ input::placeholder {
   color: gray;
   text-decoration: line-through;
 }
+
+@media (min-width: 760px) {
+  #container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1366px) {
+  #container {
+    width: 40%;
+  }
+}
+
