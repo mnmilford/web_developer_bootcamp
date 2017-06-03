@@ -9,6 +9,5 @@ body {
 #container {
   background: gray;
   width: 360px;
-  border: 3px solid black;
   margin: 0 auto;
 }
