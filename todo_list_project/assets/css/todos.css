@@ -10,12 +10,14 @@ h1 {
   padding: 12px;
   color: white;
   text-transform: uppercase;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+
+.fa-plus {
+  float: right;
 }
 
 li {
-  padding: 12px;
+  line-height: 40px;
   color: #666;
 }
 
@@ -23,9 +25,21 @@ li:nth-of-type(even) {
   background: #f7f7f7;
 }
 
-li:last-of-type {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+li:hover span {
+  width: 40px;
+  opacity: 1;
+}
+
+span {
+  background-color: #e74c3c;
+  height: 40px;
+  width: 0;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  transition: all .2s;
+  opacity: 0;
 }
 
 #container {
@@ -33,7 +47,6 @@ li:last-of-type {
   margin: 6% auto 0;
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,.2);
-  border-radius: 10px;
 }
 
 input {
