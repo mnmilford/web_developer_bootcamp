@@ -1,0 +1,14 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#container {
+  background: gray;
+  width: 360px;
+  border: 3px solid black;
+  margin: 0 auto;
+}
