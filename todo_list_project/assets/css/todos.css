@@ -12,10 +12,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.fa-plus {
-  float: right;
-}
-
 li {
   line-height: 40px;
   color: #666;
@@ -42,13 +38,6 @@ span {
   opacity: 0;
 }
 
-#container {
-  width: 90%;
-  margin: 6% auto 0;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
-}
-
 input {
   width: 100%;
   background-color: #f7f7f7;
@@ -68,6 +57,19 @@ input:focus {
 input::placeholder {
   color: #9D9C9D;
   font-weight: normal;
+}
+
+.fa-plus {
+  float: right;
+}
+
+
+
+#container {
+  width: 90%;
+  margin: 6% auto 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
 }
 
 .completed {

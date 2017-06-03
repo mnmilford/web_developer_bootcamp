@@ -19,3 +19,8 @@ $("input").keypress(function(event){
     $(this).val("");
   }
 });
+
+// Toggle view of the input field when clicking the plus sign
+$(".fa-plus").on("click", function(){;
+  $("input").fadeToggle();
+});
