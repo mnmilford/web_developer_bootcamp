@@ -21,3 +21,8 @@ input {
   height: 30px;
   border: none;
 }
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
